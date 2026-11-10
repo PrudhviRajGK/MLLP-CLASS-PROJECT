@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lecture Summarizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Audio Lecture Summarizer</h1>
+    <p class="subtitle">Upload a recorded lecture and get a summary, key points, and quiz questions.</p>
+
+    <form id="upload-form">
+      <input type="file" id="audio-input" name="audio" accept="audio/*" required />
+      <button type="submit" id="submit-btn">Summarize</button>
+    </form>
+
+    <div id="status" class="hidden"></div>
+
+    <div id="results" class="hidden">
+      <h2 id="result-title"></h2>
+
+      <section>
+        <h3>Summary</h3>
+        <p id="result-summary"></p>
+      </section>
+
+      <section>
+        <h3>Key Points</h3>
+        <ul id="result-key-points"></ul>
+      </section>
+
+      <section>
+        <h3>Questions</h3>
+        <ol id="result-questions"></ol>
+      </section>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

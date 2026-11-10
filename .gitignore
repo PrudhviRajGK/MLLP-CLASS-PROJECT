@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+.env
+samples/demo_lecture.mp3
+.DS_Store
